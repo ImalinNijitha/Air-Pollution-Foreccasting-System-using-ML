@@ -260,122 +260,6 @@ if predicted_aqi > DANGER_THRESHOLD:
 
 ---
 
-## ⚡ Quick Start
-
-### Prerequisites
-
-```bash
-Python 3.9+
-pip
-Twilio Account (for SMS alerts)
-```
-
-### Installation
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/airguard-ai.git
-cd airguard-ai
-
-# 2. Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate        # Linux/Mac
-venv\Scripts\activate           # Windows
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Configure environment variables
-cp .env.example .env
-# Edit .env with your Twilio credentials and thresholds
-
-# 5. Initialize the database
-python scripts/init_db.py
-
-# 6. Train the ML model
-python scripts/train_model.py
-
-# 7. Launch the application
-python app.py
-```
-
-### Environment Configuration
-
-```env
-# .env.example
-
-# Flask
-FLASK_ENV=development
-SECRET_KEY=your_secret_key_here
-
-# Twilio SMS Alerts
-TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-TWILIO_AUTH_TOKEN=your_auth_token_here
-TWILIO_PHONE_NUMBER=+1234567890
-
-# Alert Recipients
-FACTORY_OWNER_PHONE=+91XXXXXXXXXX
-SAFETY_MANAGER_PHONE=+91XXXXXXXXXX
-GOVERNMENT_AUTHORITY_PHONE=+91XXXXXXXXXX
-
-# Pollution Thresholds
-CO2_WARNING=1000
-CO2_DANGER=2000
-PM25_WARNING=35
-PM25_DANGER=75
-```
-
----
-
-## 📁 Project Structure
-
-```
-airguard-ai/
-│
-├── app.py                      # Flask application entry point
-├── requirements.txt            # Python dependencies
-├── .env.example                # Environment variable template
-│
-├── models/                     # ML model files
-│   ├── pollution_forecast.pkl  # Trained prediction model
-│   └── scaler.pkl              # Feature scaler
-│
-├── ml/                         # Machine learning pipeline
-│   ├── train_model.py          # Model training script
-│   ├── predict.py              # Real-time prediction engine
-│   └── preprocess.py           # Data preprocessing utilities
-│
-├── routes/                     # Flask route handlers
-│   ├── auth.py                 # Login / role-based access
-│   ├── dashboard.py            # Dashboard routes
-│   ├── api.py                  # REST API endpoints
-│   └── alerts.py               # Alert management
-│
-├── alerts/                     # Twilio SMS alert system
-│   ├── twilio_client.py        # Twilio API integration
-│   └── escalation.py           # 3-level escalation logic
-│
-├── templates/                  # HTML templates
-│   ├── admin/                  # Admin dashboard views
-│   ├── factory_owner/          # Factory owner views
-│   ├── authority/              # Government authority views
-│   └── worker/                 # Worker views
-│
-├── static/                     # CSS, JS, assets
-│   ├── css/
-│   ├── js/
-│   └── charts/
-│
-├── data/                       # Sample datasets
-│   ├── industrial_data.csv
-│   └── historical_emissions.csv
-│
-└── scripts/                    # Utility scripts
-    ├── init_db.py              # Database initialization
-    └── simulate_sensors.py     # Sensor data simulator for testing
-```
-
----
 
 ## 🛠️ Tech Stack
 
@@ -444,7 +328,7 @@ airguard-ai/
 
 <div align="center">
 
-**Developed with ❤️ to protect communities and the environment**
+**Developed by Imalin Nijitha **
 
 *This project demonstrates the real-world application of AI, Machine Learning, and real-time communication technologies to solve critical industrial pollution challenges.*
 
