@@ -70,13 +70,13 @@ This model analyzes real-time sensor data from factories and thermal power plant
 │                                                                          │
 │   🏭 DATA SOURCES                     🧠 ML ENGINE                      │
 │   ┌──────────────────┐                ┌────────────────────────────┐     │
-│   │  IoT Sensors     │───────────────▶│  Preprocessing             │     │
-│   │  • CO₂  • SO₂   │                │  (Pandas + NumPy)          │      │
-│   │  • NO₂  • PM2.5 │                │          ↓                 │     │
-│   │  • PM10 • Temp  │                │  Feature Engineering       │     │
-│   │  • Humidity     │                │          ↓                 │     │
-│   │  • Fuel Usage   │                │  Scikit-learn Model        │     │
-│   │  • Op. Hours    │                │  (Random Forest)           │     │
+│   │  IoT Sensors     │───────────────▶│  Preprocessing             │    │
+│   │  • CO₂  • SO₂   │                 │  (Pandas + NumPy)          │     │
+│   │  • NO₂  • PM2.5 │                 │          ↓                 │     │
+│   │  • PM10 • Temp  │                 │  Feature Engineering       │     │
+│   │  • Humidity     │                 │          ↓                 │     │
+│   │  • Fuel Usage   │                 │  Scikit-learn Model        │     │
+│   │  • Op. Hours    │                 │  (Random Forest)           │     │
 │   └──────────────────┘                │          ↓                 │     │
 │                                       │  Pollution Forecast        │     │
 │                                       └────────────┬───────────────┘     │
