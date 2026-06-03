@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}{{ factory.name }} — Dashboard{% endblock %}
+{% block content %}
+
+<div class="page-header">
+  <h1>{{ factory.name }}</h1>
+  <span class="status-badge status-{{ factory.status }}">● {{ factory.status|upper }}</span>
+</div>
+
+<!-- Live Sensor Gauges -->
+{% if readings %}
+{% set latest = readings[0] %}
+<div class="card-grid">
+  <div class="sensor-card {% if latest.co2 > 2000 %}red{% elif latest.co2 > 1000 %}yellow{% else %}green{% endif %}">
+    <div class="sensor-label">CO₂</div>
+    <div class="sensor-value">{{ latest.co2 }}</div>
+    <div class="sensor-unit">ppm</div>
+  </div>
+  <div class="sensor-card {% if latest.so2 > 200 %}red{% elif latest.so2 > 80 %}yellow{% else %}green{% endif %}">
+    <div class="sensor-label">SO₂</div>
+    <div class="sensor-value">{{ latest.so2 }}</div>
+    <div class="sensor-unit">µg/m³</div>
+  </div>
+  <div class="sensor-card {% if latest.pm25 > 75 %}red{% elif latest.pm25 > 35 %}yellow{% else %}green{% endif %}">
+    <div class="sensor-label">PM2.5</div>
+    <div class="sensor-value">{{ latest.pm25 }}</div>
+    <div class="sensor-unit">µg/m³</div>
+  </div>
+  <div class="sensor-card {% if latest.no2 > 200 %}red{% elif latest.no2 > 100 %}yellow{% else %}green{% endif %}">
+    <div class="sensor-label">NO₂</div>
+    <div class="sensor-value">{{ latest.no2 }}</div>
+    <div class="sensor-unit">µg/m³</div>
+  </div>
+  <div class="sensor-card {% if latest.pm10 > 250 %}red{% elif latest.pm10 > 150 %}yellow{% else %}green{% endif %}">
+    <div class="sensor-label">PM10</div>
+    <div class="sensor-value">{{ latest.pm10 }}</div>
+    <div class="sensor-unit">µg/m³</div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Trend Chart -->
+<div class="card">
+  <h2>Pollution Trend — Last 50 Readings</h2>
+  <canvas id="trendChart" height="100"></canvas>
+</div>
+
+<!-- Recent Alerts for this Factory -->
+<div class="card">
+  <h2>Recent Alerts</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Time</th><th>Level</th><th>Pollutant</th><th>Value</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      {% for a in alerts %}
+      <tr>
+        <td>{{ a.timestamp.strftime('%d %b %H:%M') }}</td>
+        <td><span class="level-badge level-{{ a.level }}">Level {{ a.level }}</span></td>
+        <td>{{ a.pollutant|upper }}</td>
+        <td>{{ a.value }}</td>
+        <td class="{{ 'text-green' if a.sms_status == 'sent' else 'text-red' }}">{{ a.sms_status }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+const labels = {{ readings | map(attribute='timestamp') | map('string') | list | tojson }};
+const aqi    = {{ readings | map(attribute='aqi') | list | tojson }};
+const co2    = {{ readings | map(attribute='co2') | list | tojson }};
+
+new Chart(document.getElementById('trendChart'), {
+  type: 'line',
+  data: {
+    labels: labels.reverse(),
+    datasets: [
+      { label: 'AQI',  data: aqi.reverse(),  borderColor: '#ff4444', tension: 0.4, fill: false },
+      { label: 'CO₂',  data: co2.reverse(),  borderColor: '#00ff88', tension: 0.4, fill: false },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { labels: { color: '#aaddff' } } },
+    scales: {
+      x: { ticks: { color: '#607090', maxTicksLimit: 10 }, grid: { color: '#1a2a3a' } },
+      y: { ticks: { color: '#607090' },                    grid: { color: '#1a2a3a' } },
+    }
+  }
+});
+</script>
+{% endblock %}

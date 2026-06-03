@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Regional Overview — Authority{% endblock %}
+{% block content %}
+
+<div class="page-header">
+  <h1>Regional Pollution Overview</h1>
+  <span class="live-badge">● LIVE MONITORING</span>
+</div>
+
+<div class="card-grid">
+  <div class="stat-card">
+    <div class="stat-label">Monitored Facilities</div>
+    <div class="stat-value">{{ factories|length }}</div>
+  </div>
+  <div class="stat-card red">
+    <div class="stat-label">Critical Alerts (L3)</div>
+    <div class="stat-value">{{ alerts|length }}</div>
+  </div>
+  <div class="stat-card red">
+    <div class="stat-label">Dangerous Facilities</div>
+    <div class="stat-value">{{ factories|selectattr('status','eq','red')|list|length }}</div>
+  </div>
+  <div class="stat-card green">
+    <div class="stat-label">Compliant Facilities</div>
+    <div class="stat-value">{{ factories|selectattr('status','eq','green')|list|length }}</div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Facility Compliance Status</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Facility</th><th>Type</th><th>Location</th><th>Current Status</th></tr>
+    </thead>
+    <tbody>
+      {% for f in factories %}
+      <tr>
+        <td><strong>{{ f.name }}</strong></td>
+        <td>{{ f.type }}</td>
+        <td>{{ f.location }}</td>
+        <td><span class="status-badge status-{{ f.status }}">{{ f.status|upper }}</span></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>Level 3 Regulatory Breach Alerts</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Timestamp</th><th>Facility ID</th><th>Pollutant</th><th>Recorded Value</th><th>Legal Limit</th><th>SMS Sent</th></tr>
+    </thead>
+    <tbody>
+      {% for a in alerts %}
+      <tr>
+        <td>{{ a.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+        <td>{{ a.factory_id }}</td>
+        <td>{{ a.pollutant|upper }}</td>
+        <td class="text-red">{{ a.value }}</td>
+        <td>{{ a.threshold }}</td>
+        <td class="{{ 'text-green' if a.sms_status == 'sent' else 'text-red' }}">{{ a.sms_status }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

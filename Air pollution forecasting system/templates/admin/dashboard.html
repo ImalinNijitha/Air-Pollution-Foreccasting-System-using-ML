@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+
+<div class="page-header">
+  <h1>Admin Control Panel</h1>
+  <span class="live-badge">● LIVE</span>
+</div>
+
+<!-- Summary Cards -->
+<div class="card-grid">
+  <div class="stat-card">
+    <div class="stat-label">Total Factories</div>
+    <div class="stat-value">{{ factories|length }}</div>
+  </div>
+  <div class="stat-card green">
+    <div class="stat-label">Safe</div>
+    <div class="stat-value">{{ factories|selectattr('status','eq','green')|list|length }}</div>
+  </div>
+  <div class="stat-card yellow">
+    <div class="stat-label">Warning</div>
+    <div class="stat-value">{{ factories|selectattr('status','eq','yellow')|list|length }}</div>
+  </div>
+  <div class="stat-card red">
+    <div class="stat-label">Dangerous</div>
+    <div class="stat-value">{{ factories|selectattr('status','eq','red')|list|length }}</div>
+  </div>
+</div>
+
+<!-- Factory Table -->
+<div class="card">
+  <h2>All Factories</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Factory</th><th>Type</th><th>Location</th><th>Status</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+      {% for f in factories %}
+      <tr>
+        <td>{{ f.name }}</td>
+        <td>{{ f.type }}</td>
+        <td>{{ f.location }}</td>
+        <td><span class="status-badge status-{{ f.status }}">{{ f.status|upper }}</span></td>
+        <td><a href="/api/factories/{{ f.id }}/readings" class="btn-sm">View Readings</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Recent Alerts -->
+<div class="card">
+  <h2>Recent Escalation Alerts</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Time</th><th>Factory</th><th>Level</th><th>Pollutant</th><th>Value</th><th>Recipient</th><th>SMS</th></tr>
+    </thead>
+    <tbody>
+      {% for a in alerts %}
+      <tr>
+        <td>{{ a.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+        <td>{{ a.factory_id }}</td>
+        <td><span class="level-badge level-{{ a.level }}">L{{ a.level }}</span></td>
+        <td>{{ a.pollutant|upper }}</td>
+        <td>{{ a.value }}</td>
+        <td>{{ a.recipient }}</td>
+        <td class="{{ 'text-green' if a.sms_status == 'sent' else 'text-red' }}">{{ a.sms_status }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
