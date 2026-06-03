@@ -1,257 +1,208 @@
 <div align="center">
 
-<!-- BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9FF,100:92FE9D&height=200&section=header&text=🌿%20AirGuard%20AI&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI-Powered%20Industrial%20Air%20Pollution%20Forecasting%20%26%20Monitoring%20System&descAlignY=55&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1a,50:00ff88,100:00aaff&height=220&section=header&text=🌿%20AirGuard%20AI&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI-Powered%20Industrial%20Air%20Pollution%20Forecasting%20%26%20Monitoring&descAlignY=58&descSize=17&descColor=aaddff" width="100%"/>
 
 <br/>
 
-[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-Backend-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
-[![Scikit-learn](https://img.shields.io/badge/Scikit--Learn-ML%20Engine-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
-[![Twilio](https://img.shields.io/badge/Twilio-SMS%20Alerts-F22F46?style=for-the-badge&logo=twilio&logoColor=white)](https://twilio.com)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)]()
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&multiline=true&width=700&height=60&lines=Predicting+pollution+BEFORE+it+becomes+dangerous+🚨;Protecting+workers%2C+communities+%26+the+environment+🌿)](https://git.io/typing-svg)
 
 <br/>
 
-> **🚨 Predicting industrial pollution BEFORE it becomes dangerous — protecting lives, communities, and the environment.**
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-Backend-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--Learn-ML%20Engine-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Twilio](https://img.shields.io/badge/Twilio-SMS%20Alerts-F22F46?style=for-the-badge&logo=twilio&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-Scientific-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
 <br/>
 
-[🔍 Features](#-key-features) · [🏗️ Architecture](#️-system-architecture) · [🚦 Alert System](#-escalation-alert-system) · [📊 Dashboard](#-real-time-dashboard) · [🔐 Roles](#-role-based-access) · [⚡ Quick Start](#-quick-start) · [📁 Structure](#-project-structure)
+![Status](https://img.shields.io/badge/Status-Active%20Development-00ff88?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red?style=flat-square)
+![Tamil Nadu](https://img.shields.io/badge/Built%20in-Tamil%20Nadu%2C%20India-FF9933?style=flat-square)
 
 </div>
 
 ---
 
-## 🌍 The Problem We're Solving
+## 🌍 The Problem
 
-<table>
-<tr>
-<td width="60%">
+> Every year, **millions of people** are harmed by industrial air pollution — but most systems only detect it *after* it is already dangerous.
 
-Every year, **millions of people** are harmed by industrial air pollution — but most monitoring systems only **detect** pollution *after* it has already become dangerous.
+**AirGuard AI flips this model.** By analyzing real-time sensor data from factories and thermal power plants, the system **forecasts dangerous emission events in advance** and automatically alerts the right people at the right time — before harm is done.
 
-**AirGuard AI** flips this model entirely.
+---
 
-By analyzing real-time sensor data from factories and thermal power plants — including CO₂, SO₂, NO₂, PM2.5, PM10, temperature, humidity, fuel consumption, and operating hours — the system **forecasts dangerous emission events hours in advance** and automatically alerts the right people at the right time.
-
-</td>
-<td width="40%" align="center">
+## ⚡ Live Sensor Simulation
 
 ```
-🏭  Factory Emitting Gases
-        ↓
-🤖  ML Model Predicts Danger
-        ↓
-📊  Dashboard Turns Red
-        ↓
-📱  SMS Alert Fires Instantly
-        ↓
-✅  Action Taken BEFORE Crisis
+┌──────────────────────────────────────────────────────────────────────┐
+│                     🛰  LIVE SENSOR DASHBOARD                        │
+├────────────┬────────────┬────────────┬────────────┬──────────────────┤
+│    CO₂     │    SO₂     │   PM2.5    │    NO₂     │      PM10        │
+│   842 ppm  │ 124 µg/m³  │  78 µg/m³  │  67 µg/m³  │   183 µg/m³     │
+│  🟢 SAFE   │ 🟡 WARNING │ 🔴 DANGER  │  🟢 SAFE   │  🟡 WARNING     │
+└────────────┴────────────┴────────────┴────────────┴──────────────────┘
 ```
-
-</td>
-</tr>
-</table>
 
 ---
 
 ## ✨ Key Features
 
-<table>
-<tr>
-<td align="center" width="25%">
-<h3>🔮</h3>
-<b>AI Forecasting</b><br/>
-<sub>Predicts future pollution levels using trained ML models on historical industrial data</sub>
-</td>
-<td align="center" width="25%">
-<h3>📡</h3>
-<b>Real-Time Monitoring</b><br/>
-<sub>Live dashboard tracks CO₂, SO₂, NO₂, PM2.5, PM10, temperature & humidity</sub>
-</td>
-<td align="center" width="25%">
-<h3>🚨</h3>
-<b>Smart SMS Alerts</b><br/>
-<sub>3-level escalation system via Twilio — from factory owner to government authority</sub>
-</td>
-<td align="center" width="25%">
-<h3>🗺️</h3>
-<b>Factory Map View</b><br/>
-<sub>Color-coded status: 🟢 Safe · 🟡 Warning · 🔴 Dangerous</sub>
-</td>
-</tr>
-<tr>
-<td align="center" width="25%">
-<h3>👥</h3>
-<b>Role-Based Access</b><br/>
-<sub>Separate dashboards for Admin, Factory Owner, Authority, and Worker</sub>
-</td>
-<td align="center" width="25%">
-<h3>📈</h3>
-<b>Trend Visualization</b><br/>
-<sub>Time-series charts, pollution history, and predictive trend lines</sub>
-</td>
-<td align="center" width="25%">
-<h3>⚙️</h3>
-<b>Multi-Pollutant Analysis</b><br/>
-<sub>Tracks 8+ environmental parameters simultaneously</sub>
-</td>
-<td align="center" width="25%">
-<h3>🛡️</h3>
-<b>Threshold Engine</b><br/>
-<sub>Customizable safe/warning/danger thresholds per pollutant per factory</sub>
-</td>
-</tr>
-</table>
+| Feature | Description |
+|---------|-------------|
+| 🔮 **AI Forecasting** | Predicts future pollution levels using trained ML models on industrial data |
+| 📡 **Real-Time Monitoring** | Live dashboard tracks CO₂, SO₂, NO₂, PM2.5, PM10, temperature and humidity |
+| 🚨 **3-Level SMS Alerts** | Automated escalation via Twilio — Factory Owner → Safety Manager → Government |
+| 🗺️ **Factory Map** | Color-coded status map: 🟢 Safe · 🟡 Warning · 🔴 Dangerous |
+| 👥 **Role-Based Login** | Separate dashboards for Admin, Factory Owner, Government Authority, Worker |
+| 📈 **Trend Visualization** | Historical charts with ML forecast overlay in real time |
+| ⚙️ **Multi-Pollutant** | Tracks 8+ environmental parameters simultaneously |
+| 🛡️ **Threshold Engine** | Customizable safe/warning/danger limits per pollutant per factory |
 
 ---
 
 ## 🏗️ System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        AirGuard AI System                           │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│   🏭 DATA SOURCES              🧠 ML ENGINE                        │
-│   ┌──────────────┐             ┌──────────────────────────────┐     │
-│   │ IoT Sensors  │──────────▶  │  Data Preprocessing          │     │
-│   │ • CO₂        │             │  (Pandas + NumPy)            │     │
-│   │ • SO₂        │             │         ↓                    │     │
-│   │ • NO₂        │             │  Feature Engineering         │     │
-│   │ • PM2.5      │             │         ↓                    │     │
-│   │ • PM10       │             │  Scikit-learn Models         │     │
-│   │ • Temp       │             │  (Random Forest / XGBoost)   │     │
-│   │ • Humidity   │             │         ↓                    │     │
-│   │ • Fuel Use   │             │  Pollution Forecast          │     │
-│   └──────────────┘             └──────────┬───────────────────┘     │
-│                                           │                         │
-│   ⚡ FLASK BACKEND                        ▼                         │
-│   ┌──────────────────────────────────────────────────────────┐      │
-│   │  REST API  →  Threshold Check  →  Alert Engine           │      │
-│   └────────────────────────┬─────────────────────────────────┘      │
-│                            │                                        │
-│         ┌──────────────────┼──────────────────┐                    │
-│         ▼                  ▼                  ▼                     │
-│   📊 Dashboard        📱 Twilio SMS      🗄️ Database               │
-│   (Real-Time)         (Escalation)       (History)                  │
-└─────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────┐
+│                           AirGuard AI System                             │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│   🏭 DATA SOURCES                     🧠 ML ENGINE                       │
+│   ┌──────────────────┐                ┌────────────────────────────┐     │
+│   │  IoT Sensors     │───────────────▶│  Preprocessing             │     │
+│   │  • CO₂  • SO₂   │                │  (Pandas + NumPy)          │     │
+│   │  • NO₂  • PM2.5 │                │          ↓                 │     │
+│   │  • PM10 • Temp  │                │  Feature Engineering       │     │
+│   │  • Humidity     │                │          ↓                 │     │
+│   │  • Fuel Usage   │                │  Scikit-learn Model        │     │
+│   │  • Op. Hours    │                │  (Random Forest)           │     │
+│   └──────────────────┘                │          ↓                 │     │
+│                                       │  Pollution Forecast        │     │
+│                                       └────────────┬───────────────┘     │
+│                                                    │                     │
+│   ⚡ FLASK BACKEND                                 ▼                     │
+│   ┌──────────────────────────────────────────────────────────────┐       │
+│   │   REST API  ──▶  Threshold Check  ──▶  Alert Engine          │       │
+│   └────────────────────────┬─────────────────────────────────────┘       │
+│                            │                                             │
+│          ┌─────────────────┼──────────────────┐                         │
+│          ▼                 ▼                  ▼                          │
+│    📊 Dashboard       📱 Twilio SMS      🗄️ Database                    │
+│    (Real-Time)        (Escalation)       (History + Logs)               │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
-
----
-
-## 🚦 Escalation Alert System
-
-> **The right person gets alerted at the right time — automatically.**
-
-```
-POLLUTION LEVEL RISING...
-         │
-         ▼
-┌─────────────────────────────────────────────────────┐
-│                                                     │
-│  🟡  LEVEL 1  —  WARNING THRESHOLD CROSSED         │
-│      ↳ 📱 SMS → Factory Owner                      │
-│         "Pollution rising at Plant A. Take action." │
-│                                                     │
-│  🟠  LEVEL 2  —  DANGER THRESHOLD CROSSED          │
-│      ↳ 📱 SMS → Safety Manager                     │
-│         "URGENT: Unsafe levels at Plant A!          │
-│          Immediate intervention required."          │
-│                                                     │
-│  🔴  LEVEL 3  —  CRITICAL / REGULATORY BREACH      │
-│      ↳ 📱 SMS → Government Authority               │
-│         "CRITICAL ALERT: Plant A exceeds legal      │
-│          limits. Regulatory action may be needed."  │
-│                                                     │
-└─────────────────────────────────────────────────────┘
-```
-
-| Level | Trigger | Recipient | Action Required |
-|-------|---------|-----------|-----------------|
-| 🟡 Level 1 | Approaches safe limit | Factory Owner | Monitor & adjust operations |
-| 🟠 Level 2 | Exceeds safe threshold | Safety Manager | Reduce output / inspect systems |
-| 🔴 Level 3 | Exceeds regulatory limit | Government Authority | Shutdown / legal action |
 
 ---
 
 ## 🗺️ Factory Status Map
 
-Each factory on the monitoring map is color-coded in real time:
+Each monitored factory is color-coded in real time:
 
 ```
-  🟢  GREEN  —  Safe
-       All pollutant levels within safe environmental limits.
+  🟢  GREEN  ──  Safe
+       All pollutants within environmental limits.
        No action required.
 
-  🟡  YELLOW  —  Warning
-       One or more pollutants approaching the safe threshold.
-       Factory owner alerted. Monitoring increased.
+  🟡  YELLOW  ──  Warning
+       One or more pollutants approaching safe threshold.
+       Factory owner alerted. Monitoring intensified.
 
-  🔴  RED  —  Dangerous
+  🔴  RED  ──  Dangerous
        Pollutant levels exceed safe limits.
-       Escalation chain triggered. Immediate action required.
+       Full escalation chain triggered. Immediate action required.
 ```
 
-This visual map is ideal for authorities monitoring multiple factories across a region simultaneously.
+**Sample Factory Status:**
+
+| Factory | Type | AQI | Status |
+|---------|------|-----|--------|
+| Coimbatore Plant A | Textile Manufacturing | 42 | 🟢 Safe |
+| Chennai Thermal PP | Thermal Power Plant | 118 | 🟡 Warning |
+| Salem Steel Works | Steel and Iron Industry | 214 | 🔴 Dangerous |
+| Tirupur Dyeing Unit | Chemical Processing | 55 | 🟢 Safe |
+| Erode Cement Works | Cement Production | 97 | 🟡 Warning |
+| Madurai Refinery | Petroleum Refinery | 38 | 🟢 Safe |
 
 ---
 
-## 📊 Real-Time Dashboard
+## 🚨 Escalation Alert System
 
-The monitoring dashboard provides:
+> The right person gets alerted at the right time — automatically.
 
-- **Live pollution gauges** — animated dials for CO₂, SO₂, NO₂, PM2.5, PM10
-- **Time-series trend charts** — historical + ML forecast overlay
-- **Factory status cards** — color-coded with key metrics
-- **Alert history log** — timestamped record of all SMS alerts sent
-- **Environmental heatmap** — pollution intensity across monitored facilities
+```
+POLLUTION LEVEL RISING...
+         │
+         ▼
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│  🟡  LEVEL 1  ──  WARNING THRESHOLD CROSSED                │
+│      Trigger  : Pollutant reaches 80% of safe limit         │
+│      Action   : 📱 SMS ──▶ Factory Owner                   │
+│      Message  : "Pollution rising at Plant A.               │
+│                  Take preventive action now."               │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  🟠  LEVEL 2  ──  DANGER THRESHOLD CROSSED                 │
+│      Trigger  : Pollutant exceeds safe limit                │
+│      Action   : 📱 SMS ──▶ Safety Manager                  │
+│      Message  : "URGENT: Unsafe emission levels at          │
+│                  Plant A. Immediate intervention needed."   │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  🔴  LEVEL 3  ──  REGULATORY BREACH                        │
+│      Trigger  : Pollutant exceeds legal or regulatory limit │
+│      Action   : 📱 SMS ──▶ Government Authority            │
+│      Message  : "CRITICAL: Plant A exceeds legal emission   │
+│                  limits. Regulatory action required."       │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
 
----
-
-## 🔐 Role-Based Access
-
-| Role | Access Level | Key Capabilities |
-|------|-------------|-----------------|
-| 🔴 **Admin** | Full system access | Manage users, configure thresholds, view all data |
-| 🏭 **Factory Owner** | Own factory data | View live metrics, forecast, alert history |
-| 🏛️ **Government Authority** | Read-only all factories | Regional overview, compliance status, escalation logs |
-| 👷 **Worker** | Basic status view | Current safety status of their facility |
+| Level | Threshold | Recipient | Response |
+|-------|-----------|-----------|----------|
+| 🟡 Level 1 | 80% of safe limit | Factory Owner | Monitor and adjust operations |
+| 🟠 Level 2 | Exceeds safe limit | Safety Manager | Reduce output, inspect systems |
+| 🔴 Level 3 | Exceeds legal limit | Government Authority | Shutdown or regulatory action |
 
 ---
 
 ## 🧠 Machine Learning Pipeline
 
-```python
-# Simplified ML pipeline overview
-
-# 1. Input Features
-features = ['CO2', 'SO2', 'NO2', 'PM2_5', 'PM10',
-            'temperature', 'humidity', 'fuel_consumption',
-            'operating_hours', 'hour_of_day', 'day_of_week']
-
-# 2. Preprocessing
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X_train)
-
-# 3. Model Training
-model = RandomForestRegressor(n_estimators=100, random_state=42)
-model.fit(X_scaled, y_train)
-
-# 4. Forecast Output
-predicted_aqi = model.predict(X_future)
-
-# 5. Alert Trigger
-if predicted_aqi > DANGER_THRESHOLD:
-    trigger_escalation(level=3)
+```
+📡 Sensor Input        🧹 Preprocessing       🤖 ML Model
+┌──────────────┐       ┌──────────────┐       ┌─────────────────┐
+│ CO₂, SO₂     │──────▶│ Pandas clean │──────▶│ Random Forest   │
+│ NO₂, PM2.5   │       │ NumPy scale  │       │ Feature import. │
+│ PM10, Temp   │       │ Encode time  │       │ Cross-validate  │
+│ Humidity     │       │ Handle nulls │       │ Fit & save .pkl │
+│ Fuel, Hours  │       └──────────────┘       └────────┬────────┘
+└──────────────┘                                       │
+                                                       ▼
+                                             🔮 Forecast Output
+                                             ┌──────────────────┐
+                                             │ Predicted AQI    │
+                                             │ per pollutant    │
+                                             │ for next N hours │
+                                             └────────┬─────────┘
+                                                      │
+                                                      ▼
+                                             ⚡ Threshold Check
+                                             ┌──────────────────┐
+                                             │ Safe?   → Monitor│
+                                             │ Warn?   → Level 1│
+                                             │ Danger? → L2/L3  │
+                                             └──────────────────┘
 ```
 
-**Monitored Pollutants & Parameters:**
+**Pollutant Thresholds:**
 
-| Parameter | Unit | Safe Limit | Warning | Danger |
-|-----------|------|-----------|---------|--------|
+| Parameter | Unit | 🟢 Safe | 🟡 Warning | 🔴 Danger |
+|-----------|------|---------|-----------|----------|
 | CO₂ | ppm | < 1000 | 1000–2000 | > 2000 |
 | SO₂ | µg/m³ | < 80 | 80–200 | > 200 |
 | NO₂ | µg/m³ | < 100 | 100–200 | > 200 |
@@ -260,86 +211,206 @@ if predicted_aqi > DANGER_THRESHOLD:
 
 ---
 
+## 🔐 Role-Based Access
+
+```
+┌────────────────┬────────────────────────────────────────────────────┐
+│     Role       │  Capabilities                                      │
+├────────────────┼────────────────────────────────────────────────────┤
+│ 🔴 Admin       │ Manage users and factories, configure thresholds,  │
+│                │ view all system data, access all escalation logs   │
+├────────────────┼────────────────────────────────────────────────────┤
+│ 🏭 Factory     │ Live emissions dashboard for own plant,            │
+│    Owner       │ pollution forecasts, alert history, compliance     │
+├────────────────┼────────────────────────────────────────────────────┤
+│ 🏛️ Government  │ Regional all-factory overview map,                 │
+│    Authority   │ regulatory breach history, Level 3 alert logs      │
+├────────────────┼────────────────────────────────────────────────────┤
+│ 👷 Worker      │ Current facility safety status, active alerts,     │
+│                │ evacuation guidance when danger level reached      │
+└────────────────┴────────────────────────────────────────────────────┘
+```
+
+---
 
 ## 🛠️ Tech Stack
 
-<table>
-<tr>
-<th>Layer</th>
-<th>Technology</th>
-<th>Purpose</th>
-</tr>
-<tr>
-<td>Backend</td>
-<td>Python + Flask</td>
-<td>REST API, routing, business logic</td>
-</tr>
-<tr>
-<td>ML / Data</td>
-<td>Scikit-learn, Pandas, NumPy</td>
-<td>Forecasting, preprocessing, analysis</td>
-</tr>
-<tr>
-<td>Alerts</td>
-<td>Twilio API</td>
-<td>Automated SMS escalation system</td>
-</tr>
-<tr>
-<td>Frontend</td>
-<td>HTML, CSS, JavaScript, Chart.js</td>
-<td>Real-time dashboard & visualizations</td>
-</tr>
-<tr>
-<td>Database</td>
-<td>SQLite / PostgreSQL</td>
-<td>Sensor data, user management, alert logs</td>
-</tr>
-<tr>
-<td>Auth</td>
-<td>Flask-Login + JWT</td>
-<td>Role-based access control</td>
-</tr>
-</table>
-
----
-
-## 📈 Impact & Applications
-
-- **🏭 Industrial Compliance** — Helps factories stay within legal emission limits proactively
-- **🏥 Public Health** — Early warnings reduce community exposure to hazardous gases
-- **🌿 Environmental Protection** — Enables faster regulatory response to pollution events
-- **📋 Data-Driven Policy** — Historical trends support evidence-based environmental regulation
-- **🤝 Government Integration** — Provides authorities real-time visibility across all monitored facilities
-
----
-
-## 🔮 Future Enhancements
-
-- [ ] Mobile app (Android/iOS) for on-the-go monitoring
-- [ ] Integration with national air quality APIs (CPCB, EPA)
-- [ ] Drone-based sensor data ingestion
-- [ ] LSTM deep learning model for improved time-series forecasting
-- [ ] Satellite imagery integration for regional pollution mapping
-- [ ] WhatsApp alerts in addition to SMS
-
----
-
-## 👨‍💻 Author
-
 <div align="center">
 
-**Developed by Imalin Nijitha **
-
-*This project demonstrates the real-world application of AI, Machine Learning, and real-time communication technologies to solve critical industrial pollution challenges.*
-
----
-
-⭐ **Star this repo if you find it useful!** ⭐
+![Skills](https://skillicons.dev/icons?i=python,flask,sklearn,html,css,js,sqlite,git&theme=dark)
 
 </div>
 
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| 🐍 Backend | Python + Flask | REST API, routing, business logic |
+| 🤖 ML / Data | Scikit-learn, Pandas, NumPy | Forecasting, preprocessing, analysis |
+| 📱 Alerts | Twilio API | Automated 3-level SMS escalation |
+| 📊 Frontend | HTML, CSS, JS, Chart.js | Real-time dashboard and visualizations |
+| 🗄️ Database | SQLite / PostgreSQL | Sensor data, users, alert logs |
+| 🔐 Auth | Flask-Login + JWT | Role-based access control |
+
+---
+
+## ⚡ Quick Start
+
+### Prerequisites
+
+```
+Python 3.9+  |  pip  |  Twilio Account
+```
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/airguard-ai.git
+cd airguard-ai
+
+# 2. Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate        # Linux / Mac
+venv\Scripts\activate           # Windows
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Configure environment variables
+cp .env.example .env
+# Edit .env with your Twilio credentials and thresholds
+
+# 5. Initialize the database
+python scripts/init_db.py
+
+# 6. Train the ML model
+python scripts/train_model.py
+
+# 7. Launch the application
+python app.py
+```
+
+### Environment Setup
+
+```env
+# Flask
+FLASK_ENV=development
+SECRET_KEY=your_secret_key_here
+
+# Twilio SMS Alerts
+TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+TWILIO_AUTH_TOKEN=your_auth_token_here
+TWILIO_PHONE_NUMBER=+1234567890
+
+# Alert Recipients
+FACTORY_OWNER_PHONE=+91XXXXXXXXXX
+SAFETY_MANAGER_PHONE=+91XXXXXXXXXX
+GOVERNMENT_AUTHORITY_PHONE=+91XXXXXXXXXX
+
+# Thresholds (customizable per factory)
+CO2_WARNING=1000
+CO2_DANGER=2000
+PM25_WARNING=35
+PM25_DANGER=75
+SO2_WARNING=80
+SO2_DANGER=200
+```
+
+---
+
+## 📁 Project Structure
+
+```
+airguard-ai/
+│
+├── app.py                        # Flask entry point
+├── requirements.txt              # Python dependencies
+├── .env.example                  # Environment variable template
+│
+├── ml/                           # Machine learning pipeline
+│   ├── train_model.py            # Model training script
+│   ├── predict.py                # Real-time prediction engine
+│   └── preprocess.py             # Data preprocessing utilities
+│
+├── models/                       # Saved ML model files
+│   ├── pollution_forecast.pkl    # Trained prediction model
+│   └── scaler.pkl                # Feature scaler
+│
+├── routes/                       # Flask route handlers
+│   ├── auth.py                   # Login / role-based access
+│   ├── dashboard.py              # Dashboard views
+│   ├── api.py                    # REST API endpoints
+│   └── alerts.py                 # Alert management
+│
+├── alerts/                       # Twilio SMS alert system
+│   ├── twilio_client.py          # Twilio API integration
+│   └── escalation.py             # 3-level escalation logic
+│
+├── templates/                    # HTML templates per role
+│   ├── admin/
+│   ├── factory_owner/
+│   ├── authority/
+│   └── worker/
+│
+├── static/                       # CSS, JS, chart assets
+│
+├── data/                         # Sample datasets
+│   ├── industrial_data.csv
+│   └── historical_emissions.csv
+│
+└── scripts/                      # Utility scripts
+    ├── init_db.py                # Database initialization
+    └── simulate_sensors.py       # Sensor data simulator for testing
+```
+
+---
+
+## 📈 Impact
+
+- 🏭 **Industrial Compliance** — Helps factories proactively stay within legal emission limits
+- 🏥 **Public Health** — Early warnings reduce community exposure to hazardous gases
+- 🌿 **Environmental Safety** — Faster response to pollution events before they escalate
+- 📋 **Data-Driven Policy** — Historical trends support evidence-based environmental regulation
+- 🤝 **Government Integration** — Real-time visibility across all monitored facilities
+
+---
+
+## 🔮 Future Roadmap
+
+- [ ] 📱 Mobile app (Android / iOS) for on-the-go monitoring
+- [ ] 🌐 Integration with national air quality APIs (CPCB, EPA)
+- [ ] 🚁 Drone-based sensor data ingestion
+- [ ] 🧠 LSTM deep learning model for improved time-series forecasting
+- [ ] 🛰️ Satellite imagery for regional pollution heatmaps
+- [ ] 💬 WhatsApp and Email alerts in addition to SMS
+- [ ] 🌍 Multi-language support (Tamil, Hindi, English)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+```bash
+git checkout -b feature/AmazingFeature
+git commit -m 'Add some AmazingFeature'
+git push origin feature/AmazingFeature
+```
+
 ---
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:92FE9D,100:00C9FF&height=100&section=footer" width="100%"/>
+
+### 💚 Built to protect communities from industrial air pollution
+
+*Demonstrating the real-world application of AI, Machine Learning,*
+*and real-time communication to solve critical environmental challenges.*
+
+<br/>
+
+⭐ **Star this repo if you find it useful!** ⭐
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00aaff,100:00ff88&height=120&section=footer" width="100%"/>
+
 </div>
