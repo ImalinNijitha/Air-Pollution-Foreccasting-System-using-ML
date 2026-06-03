@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1a,50:00ff88,100:00aaff&height=220&section=header&text=🌿%20AirGuard%20AI&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI-Powered%20Industrial%20Air%20Pollution%20Forecasting%20%26%20Monitoring&descAlignY=58&descSize=17&descColor=aaddff" width="100%"/>
-
 <br/>
+"AIR POLLUTION FORECASTING SYSTEM USING ML"
+
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&multiline=true&width=700&height=60&lines=Predicting+pollution+BEFORE+it+becomes+dangerous+🚨;Protecting+workers%2C+communities+%26+the+environment+🌿)](https://git.io/typing-svg)
 
@@ -18,8 +18,6 @@
 <br/>
 
 ![Status](https://img.shields.io/badge/Status-Active%20Development-00ff88?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
-![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red?style=flat-square)
 ![Tamil Nadu](https://img.shields.io/badge/Built%20in-Tamil%20Nadu%2C%20India-FF9933?style=flat-square)
 
 </div>
@@ -30,11 +28,11 @@
 
 > Every year, **millions of people** are harmed by industrial air pollution — but most systems only detect it *after* it is already dangerous.
 
-**AirGuard AI flips this model.** By analyzing real-time sensor data from factories and thermal power plants, the system **forecasts dangerous emission events in advance** and automatically alerts the right people at the right time — before harm is done.
+This model analyzes real-time sensor data from factories and thermal power plants, the system **forecasts dangerous emission events in advance** and automatically alerts the right people at the right time — before harm is done.
 
 ---
 
-## ⚡ Live Sensor Simulation
+## ⚡ Live Sensor Simulation Demo
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
@@ -70,10 +68,10 @@
 │                           AirGuard AI System                             │
 ├──────────────────────────────────────────────────────────────────────────┤
 │                                                                          │
-│   🏭 DATA SOURCES                     🧠 ML ENGINE                       │
+│   🏭 DATA SOURCES                     🧠 ML ENGINE                      │
 │   ┌──────────────────┐                ┌────────────────────────────┐     │
 │   │  IoT Sensors     │───────────────▶│  Preprocessing             │     │
-│   │  • CO₂  • SO₂   │                │  (Pandas + NumPy)          │     │
+│   │  • CO₂  • SO₂   │                │  (Pandas + NumPy)          │      │
 │   │  • NO₂  • PM2.5 │                │          ↓                 │     │
 │   │  • PM10 • Temp  │                │  Feature Engineering       │     │
 │   │  • Humidity     │                │          ↓                 │     │
@@ -85,13 +83,13 @@
 │                                                    │                     │
 │   ⚡ FLASK BACKEND                                 ▼                     │
 │   ┌──────────────────────────────────────────────────────────────┐       │
-│   │   REST API  ──▶  Threshold Check  ──▶  Alert Engine          │       │
+│   │   REST API  ──▶  Threshold Check  ──▶  Alert Engine          │      │
 │   └────────────────────────┬─────────────────────────────────────┘       │
 │                            │                                             │
-│          ┌─────────────────┼──────────────────┐                         │
+│          ┌─────────────────┼──────────────────┐                          │
 │          ▼                 ▼                  ▼                          │
-│    📊 Dashboard       📱 Twilio SMS      🗄️ Database                    │
-│    (Real-Time)        (Escalation)       (History + Logs)               │
+│    📊 Dashboard       📱 Twilio SMS      🗄️ Database                    |
+│    (Real-Time)        (Escalation)       (History + Logs)                │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -252,43 +250,6 @@ POLLUTION LEVEL RISING...
 
 ---
 
-## ⚡ Quick Start
-
-### Prerequisites
-
-```
-Python 3.9+  |  pip  |  Twilio Account
-```
-
-### Installation
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/airguard-ai.git
-cd airguard-ai
-
-# 2. Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate        # Linux / Mac
-venv\Scripts\activate           # Windows
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Configure environment variables
-cp .env.example .env
-# Edit .env with your Twilio credentials and thresholds
-
-# 5. Initialize the database
-python scripts/init_db.py
-
-# 6. Train the ML model
-python scripts/train_model.py
-
-# 7. Launch the application
-python app.py
-```
-
 ### Environment Setup
 
 ```env
@@ -386,28 +347,12 @@ airguard-ai/
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-```bash
-git checkout -b feature/AmazingFeature
-git commit -m 'Add some AmazingFeature'
-git push origin feature/AmazingFeature
-```
-
----
-
 <div align="center">
 
-### 💚 Built to protect communities from industrial air pollution
+### Developed by Imalin Nijitha 
 
-*Demonstrating the real-world application of AI, Machine Learning,*
-*and real-time communication to solve critical environmental challenges.*
 
 <br/>
-
-⭐ **Star this repo if you find it useful!** ⭐
 
 <br/>
 
